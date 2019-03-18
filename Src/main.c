@@ -10,7 +10,7 @@
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * COPYRIGHT(c) 2018 STMicroelectronics
+  * COPYRIGHT(c) 2019 STMicroelectronics
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -102,7 +102,7 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 	//HAL_GPIO_WritePin(GPIOA,PA15_Pin,GPIO_PIN_SET);
-	HAL_Delay(1000);
+	HAL_Delay(3000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -270,9 +270,9 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : PA15_Pin */
   GPIO_InitStruct.Pin = PA15_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(PA15_GPIO_Port, &GPIO_InitStruct);
 
 }
